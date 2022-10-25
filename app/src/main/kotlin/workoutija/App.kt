@@ -54,6 +54,7 @@ private fun summarize(o: JsonNode, comments: List<String>): String = with(o) {
         RPE: ${get("icu_rpe")}/10 ; Feel: ${get("feel")}/5
         💿⌀${get("average_cadence")}rpm 🌡⌀${get("average_temp")}°C
         ${get("name")} ${optionalStravaLink(o)} ... ${get("start_date_local")}
+        ${"https://intervals.icu/activities/${get("id").textValue()}"}
     """.trimIndent()
 }
 
